@@ -4,6 +4,8 @@ import com.chroma.*;
 import processing.core.*;
 
 public class TestClient extends PApplet {
+	public TestClient() {
+	}
 
 	Luma testLuma;
 	Chroma[] lumaClusters;
@@ -13,11 +15,11 @@ public class TestClient extends PApplet {
 	int endTime;
 	int totalTime;
 
-	int lumaNumber = 10;
+	int lumaNumber = 5;
 	int lumaQuality = 50;
 
-	int lumaMinL = 20;
-	int lumaMaxL = 25;
+	int lumaMinL = 70;
+	int lumaMaxL = 75;
 
 	int lumaMinC = 0;
 	int lumaMaxC = 128;
