@@ -32,7 +32,25 @@ public class Luma {
     public Luma(int clusterCount_, int quality_,  double minL_, double maxL_,
                                         double minC_, double maxC_,
                                         double minH_, double maxH_) {
+    	
+    	// Validate arguments
+    	Args.checkForPositive(clusterCount_);
+    	Args.checkForPositive(quality_);
+    	Args.checkForRange(quality_, 0, 100);
+    	
+        Args.checkForRange(minL_, 0, 100);
+        Args.checkForRange(maxL_, 0, 100);
+        Args.checkForLowHigh(minL_, maxL_);
 
+        Args.checkForRange(minC_, 0, 128);
+        Args.checkForRange(maxC_, 0, 128);
+        Args.checkForLowHigh(minC_, maxC_);
+        
+        Args.checkForRange(minH_, 0, 360);
+        Args.checkForRange(maxH_, 0, 360);
+        Args.checkForLowHigh(minH_, maxH_);
+        
+        
         clusterCount = clusterCount_;
         quality = quality_;
         maxIter = quality_;

@@ -21,8 +21,8 @@ public class MaxChroma extends PApplet {
 	int lumaNumber = 5;
 	int lumaQuality = 50;
 
-	int lumaMinL = 70;
-	int lumaMaxL = 75;
+	int lumaMinL = 50;
+	int lumaMaxL = 80;
 
 	int lumaMinC = 0;
 	int lumaMaxC = 128;

@@ -18,7 +18,7 @@ public class TestClient extends PApplet {
 	int lumaNumber = 5;
 	int lumaQuality = 50;
 
-	int lumaMinL = 70;
+	int lumaMinL = 80;
 	int lumaMaxL = 75;
 
 	int lumaMinC = 0;
