@@ -1,4 +1,4 @@
-<project name="ProcessingLibs" default="clean" basedir="../">
+<project name="LumaBuild" default="clean" basedir="../">
 
     
 <!--	

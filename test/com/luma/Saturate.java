@@ -118,6 +118,7 @@ public class Saturate extends PApplet {
 		return input.saturate();
 	}
 
+	@Override
 	public void keyReleased() {
 		// Save a screenshot in PNG format
 		if (key == 's' || key == 'S') {
