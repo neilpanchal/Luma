@@ -18,16 +18,14 @@ public class TestClient extends PApplet {
 	int lumaNumber = 5;
 	int lumaQuality = 50;
 
-	int lumaMinL = 80;
+	int lumaMinL = 40;
 	int lumaMaxL = 75;
 
 	int lumaMinC = 0;
 	int lumaMaxC = 128;
 
-	int lumaMinH = 0;
-	int lumaMaxH = 360;
-
-
+	int lumaMinH = 40;
+	int lumaMaxH = 420;
 
 	@Override
 	public void setup() {
@@ -51,10 +49,7 @@ public class TestClient extends PApplet {
 
 	    println("lumaClusters Length: " + lumaClusters.length);
 	    println("lumaDomain Length: " + lumaDomain.length);
-
-	    println("Start Time(ms): " + startTime);
-	    println("End Time(ms): " + endTime);
-	    println("Total Time(ms): " + (endTime-startTime));
+	    println("Processing Time(ms): " + (endTime-startTime));
 	    println();
 
 	}
