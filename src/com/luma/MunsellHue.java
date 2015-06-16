@@ -9,4 +9,8 @@ public enum MunsellHue {
 	private MunsellHue(int hue) {
 		this.hue = hue;
 	}
+	
+	public int getHue() {
+		return this.hue;
+	}
 }

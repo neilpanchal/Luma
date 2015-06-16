@@ -18,14 +18,14 @@ public class TestClient extends PApplet {
 	int lumaNumber = 5;
 	int lumaQuality = 50;
 
-	int lumaMinL = 40;
+	int lumaMinL = 50;
 	int lumaMaxL = 75;
 
-	int lumaMinC = 0;
-	int lumaMaxC = 128;
+	int lumaMinC = 30;
+	int lumaMaxC = 50;
 
 	int lumaMinH = 40;
-	int lumaMaxH = 420;
+	int lumaMaxH = 380;
 
 	@Override
 	public void setup() {
@@ -38,8 +38,10 @@ public class TestClient extends PApplet {
 
 
 	    startTime = millis();
+//	    testLuma = new Luma(lumaMinL, lumaMaxL, lumaMinC, lumaMaxC, lumaMinH, lumaMaxH);
 
-	    testLuma = new Luma(lumaNumber, lumaQuality, lumaMinL, lumaMaxL, lumaMinC, lumaMaxC, lumaMinH, lumaMaxH);
+//	    testLuma = new Luma(MunsellHue.GY, lumaMinL, lumaMaxL, lumaMinC, lumaMaxC);
+	    testLuma = new Luma(MunsellHue.YR, lumaMinL, lumaMaxL, lumaMinC, lumaMaxC);
 
 	    lumaClusters = testLuma.getClusters();
 	    lumaDomain = testLuma.getDomain();
