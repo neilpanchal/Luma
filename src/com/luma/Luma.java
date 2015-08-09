@@ -56,7 +56,7 @@ public class Luma {
 		
 		// Handling cyclic domains. 
 		if (minH_ < maxH_) {
-			System.out.println("minH_:"+minH_ + "<" +"maxH_:"+maxH_);
+//			System.out.println("minH_:"+minH_ + "<" +"maxH_:"+maxH_);
 			if ((cycleHue(maxH_) > minH_) && (maxH_>=360)) {
 				maxH_ = 360+minH_;
 			}
@@ -76,7 +76,7 @@ public class Luma {
 			maxH = maxH_;
 		}
 
-		System.out.println("L:"+minL+"-"+maxL+" / C:"+minC+"-"+maxC +" /H:"+minH+"-"+maxH);
+//		System.out.println("L:"+minL+"-"+maxL+" / C:"+minC+"-"+maxC +" /H:"+minH+"-"+maxH);
 		// Create random data points in the restricted domain. This method does
 		// not allow for constant domain size. The total number of data points
 		// is proportional to the input ranges of luma, chroma and hue. As a
