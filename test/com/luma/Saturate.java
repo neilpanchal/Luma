@@ -1,3 +1,5 @@
+// These tests are obsolete and do not work in Processing 3
+
 package com.luma;
 
 import com.chroma.*;
