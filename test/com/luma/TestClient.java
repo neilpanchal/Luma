@@ -1,4 +1,3 @@
-// These tests are obsolete and do not work in Processing 3
 
 package com.luma;
 
@@ -6,9 +5,12 @@ import com.chroma.*;
 import processing.core.*;
 
 public class TestClient extends PApplet {
-	public TestClient() {
-	}
 
+	public static void main(String[] args) {
+		String[] a = { "Main" };
+		PApplet.runSketch(a, new TestClient());
+	}
+	
 	Luma testLuma;
 	Chroma[] lumaClusters;
 	Chroma[] lumaDomain;
@@ -20,19 +22,25 @@ public class TestClient extends PApplet {
 	int lumaNumber = 5;
 	int lumaQuality = 50;
 
-	int lumaMinL = 50;
+	int lumaMinL = 30;
 	int lumaMaxL = 75;
 
 	int lumaMinC = 30;
-	int lumaMaxC = 50;
+	int lumaMaxC = 80;
 
 	int lumaMinH = 40;
-	int lumaMaxH = 380;
-
+	int lumaMaxH = 200;
+	
+	@Override
+	public void settings() {
+		size(600, 600, FX2D);
+		pixelDensity(2);
+	}
+	
+	
 	@Override
 	public void setup() {
 
-	    size(600, 600, "processing.core.PGraphicsRetina2D");
 	    rectMode(CENTER);
 	    smooth();
 	    noStroke();
@@ -43,7 +51,7 @@ public class TestClient extends PApplet {
 //	    testLuma = new Luma(lumaMinL, lumaMaxL, lumaMinC, lumaMaxC, lumaMinH, lumaMaxH);
 
 //	    testLuma = new Luma(MunsellHue.GY, lumaMinL, lumaMaxL, lumaMinC, lumaMaxC);
-	    testLuma = new Luma(MunsellHue.YR, lumaMinL, lumaMaxL, lumaMinC, lumaMaxC);
+	    testLuma = new Luma(MunsellHue.GY, lumaMinL, lumaMaxL, lumaMinC, lumaMaxC);
 
 	    lumaClusters = testLuma.getClusters();
 	    lumaDomain = testLuma.getDomain();

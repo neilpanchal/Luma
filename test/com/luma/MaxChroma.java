@@ -1,4 +1,3 @@
-// These tests are obsolete and do not work in Processing 3
 
 package com.luma;
 
@@ -11,6 +10,11 @@ import processing.core.*;
 
 public class MaxChroma extends PApplet {
 
+	public static void main(String[] args) {
+		String[] a = { "Main" };
+		PApplet.runSketch(a, new MaxChroma());
+	}
+	
 	Luma testLuma;
 	Chroma[] lumaClusters;
 	Chroma[] lumaMaxChroma;
@@ -33,11 +37,15 @@ public class MaxChroma extends PApplet {
 	int lumaMaxH = 360;
 
 	
-
+	@Override
+	public void settings() {
+		size(600, 600, FX2D);
+		pixelDensity(2);
+	}
+	
 	@Override
 	public void setup() {
 
-	    size(600, 600, "processing.core.PGraphicsRetina2D");
 	    rectMode(CENTER);
 	    smooth();
 	    noStroke();
@@ -60,8 +68,8 @@ public class MaxChroma extends PApplet {
 	    println("lumaClusters Length: " + lumaClusters.length);
 	    println("lumaDomain Length: " + lumaDomain.length);
 
-	    println("Start Time(ms): " + startTime);
-	    println("End Time(ms): " + endTime);
+//	    println("Start Time(ms): " + startTime);
+//	    println("End Time(ms): " + endTime);
 	    println("Total Time(ms): " + (endTime-startTime));
 	    println();
 	    

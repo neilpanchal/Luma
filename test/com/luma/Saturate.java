@@ -1,4 +1,3 @@
-// These tests are obsolete and do not work in Processing 3
 
 package com.luma;
 
@@ -8,6 +7,11 @@ import processing.core.*;
 
 public class Saturate extends PApplet {
 
+	public static void main(String[] args) {
+		String[] a = { "Main" };
+		PApplet.runSketch(a, new Saturate());
+	}
+	
 	Luma testLuma;
 	Chroma[] lumaClusters;
 	Chroma[] lumaMaxChroma;
@@ -30,9 +34,15 @@ public class Saturate extends PApplet {
 	int lumaMaxH = 360;
 
 	@Override
+	public void settings() {
+		size(1000, 1000, FX2D);
+		pixelDensity(2);
+	}
+	
+	
+	@Override
 	public void setup() {
 
-		size(1200, 1200, "processing.core.PGraphicsRetina2D");
 		rectMode(CENTER);
 		smooth();
 		noStroke();
@@ -79,7 +89,7 @@ public class Saturate extends PApplet {
 		for (int i = 0; i < lumaDomain.length; i++) {
 			// fill(lumaDomain[i].getColor());
 			stroke(lumaDomain[i].get());
-			strokeWeight(10);
+			strokeWeight(5);
 			point(map((float) lumaDomain[i].getLCH(Channel.H), 0, 360, 0, width),
 					map((float) lumaDomain[i].getLCH(Channel.C), 0, 132, 0,
 							height));
@@ -102,16 +112,16 @@ public class Saturate extends PApplet {
 
 			fill(lumaClusters[j].get());
 			stroke(100);
-			strokeWeight(4);
-			rect(cX, cY, 50, 50);
+			strokeWeight(2);
+			rect(cX, cY, 24, 24);
 
 			fill(getMaxChroma(lumaClusters[j]).get());
 			stroke(100);
-			strokeWeight(4);
-			ellipse(mX, mY, 50, 50);
+			strokeWeight(2);
+			ellipse(mX, mY, 24, 24);
 			
 			stroke(100);
-			strokeWeight(4);
+			strokeWeight(2);
 			line(cX,cY,mX,mY);
 		}
 	}
