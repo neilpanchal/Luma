@@ -5,7 +5,7 @@
 Luma is a procedural palette generator library for Processing language.
 
 
-Download it here: [Luma](http://neil.engineer/index.php?/articles/luma/ "Luma")
+Download it from the Distributions folder.
 
 Fork it on Github: [Github Repository](https://github.com/neilpanchal/Luma "Github Repository")
 
@@ -64,7 +64,7 @@ information: http://wiki.processing.org/w/How_to_Install_a_Contributed_Library
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Neil Panchal, http://neil.engineer
+Copyright (c) 2015 Neil Panchal, http://panchal.io
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
